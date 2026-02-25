@@ -1,3 +1,6 @@
+    *{
+  box-sizing: border-box;
+}
     body,html{
         margin: 0;
         padding: 0;
@@ -24,6 +27,9 @@
     }
     .logo img{
         width: 86px;
+    }
+    .logo::selection{
+        background-color: black;
     }
     nav{
         display: flex;
@@ -84,7 +90,7 @@
     }
     div.info{
         border: 1px solid white;
-        border-bottom: 0px;
+                border-bottom:none;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         align-items: center;
@@ -95,6 +101,7 @@
         box-sizing: border-box;
     }
     div.info h1{
+        margin-top: 5px;
         margin-bottom: 2px;
     }
     div.info span{
@@ -111,11 +118,12 @@
         gap: 20px;
         display: flex;
         justify-content: center;
-        border: 1px solid gray;
+        border: 1px solid rgb(255, 255, 255);
         padding: 30px;
         background-color: black;
         border-radius: 15px;
         margin: 0 auto;
+                margin-top: 5px;
         width: 990px;
         box-sizing: border-box;
     }
@@ -176,7 +184,128 @@
         .navigate button{
             width: 50%;
         }
+            .logo *:last-child{
+        border-right:none;
+        padding-right: 5px;
     }
+        .genel,.citler,.cilter{
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        div.genel{
+            width: 100%;
+    }
+        div.ciltler{
+            max-width: 990px;
+            width: 100%;
+        }
+        div.ciltler .row{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        div.ciltler .row div{
+            width: 100%;
+        }
+        div.banner{
+            display: none !important;
+        }
+    }
+
     .new{
         color: rgb(255, 145, 0);
+    }
+    div.ciltler{
+        border: 1px solid rgb(255, 255, 255);
+        margin:0 auto;
+        background-color: rgb(29, 29, 29);
+        border-radius: 15px;
+        width: 990px;
+        box-sizing: border-box  ;
+    }
+    div.row{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        display: flex;
+    }
+    div.row div.img img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 158px;
+    }
+    div.row div.img{
+        transition: all ease 0.3s;
+        border-radius: 8px;
+        border: 3px solid gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+    }
+    div.row div.img:hover{
+        cursor: pointer;
+    }
+    div.row div.img:active{
+        transition: all ease 0.3s;
+        transform: scale(0.9);
+    }
+    .genel{
+        padding: 5px;
+        font-size: 20px;
+        border: 1px solid white;
+                border-top: none;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        align-items: center;
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        background-color: rgb(29, 29, 29);
+        box-sizing: border-box;
+    }
+    .info a{
+        transition:all ease 0.3s;
+        color: wheat;
+        text-decoration: none;
+        font-weight: bold   ;
+        width: 120px;
+        height: 20px;
+    }
+    .info a:hover{
+        transition: all ease 0.3s;
+        color: blue;
+    }
+    div.main span{
+        border: 1px solid white;
+        width: 100%;
+        display: block;
+        background-color: black;
+        position: sticky;
+        z-index: 1000;
+        top: 115px;
+    }
+    div.banner{
+        border: 1px solid white;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        flex-direction: column;
+        background: linear-gradient(rgba(59, 59, 59, 0.753), rgba(141, 0, 0, 0.651)),
+                        url(banner.jpg);
+        width: 990px;
+        height: 558px;
+        display: flex;
+        margin: 0 auto;
+                margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    div.banner h2{
+        margin-bottom: 0px;
+        padding-top: 50px;
     }
